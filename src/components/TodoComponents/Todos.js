@@ -5,19 +5,16 @@ import Todo from './Todo';
 class Todos extends React.Component {
     
     constructor() {
-        super();
-        
-        
+        super();   
     }
     
     render() {
-        
+         console.log(this.props);
         return (
         
             <ol>
-                Todo Component Below
+                {this.props.todos.length}
                 <Todo />
-                
             </ol>
             
         );

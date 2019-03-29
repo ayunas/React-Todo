@@ -8,13 +8,15 @@ class App extends React.Component {
     
     render() {
         
-        const title = 'Indecision To-Do'
-        
+        const title = 'Indecision To-Do';
+        const subtitle = 'Put your life in the hands of a computer'
+        const todos = ['item1','item2','item4'];
+//         console.log(this.props);
         return (
         <div>
-            <Header title={title} />
+            <Header title={title} subtitle={subtitle} />
             <Decide />
-            <Todos />
+            <Todos todos={todos}/>
         </div>
         );
     }
