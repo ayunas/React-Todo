@@ -8,14 +8,16 @@ class Todos extends React.Component {
         super();   
     }
     
-    
+    remove() {
+        console.log('remove button has been clicked');
+    }
     
     render() {
         console.log(this.props.todos);
         
         return (
             <div>
-                <button>Remove</button>
+                <button onClick={this.remove}>Remove</button>
                 {this.props.todos.map( todo => <Todo todo={todo} key={todo}/>
                 )}
             </div>
