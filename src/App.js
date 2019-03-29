@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/TodoComponents/Header';
 import Decide from './components/TodoComponents/Decide';
 import Todos from './components/TodoComponents/Todos';
+import TodoForm from './components/TodoComponents/TodoForm';
 
 
 class App extends React.Component {
@@ -17,6 +18,7 @@ class App extends React.Component {
             <Header title={title} subtitle={subtitle} />
             <Decide />
             <Todos todos={todos}/>
+            <TodoForm />
         </div>
         );
     }
