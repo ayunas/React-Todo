@@ -9,16 +9,9 @@ class Todos extends React.Component {
     }
     
     render() {
-         console.log(this.props);
-        return (
+        console.log(this.props.todos);
         
-            <ol>
-                {this.props.todos.length}
-                <Todo todos={this.props.todos}/>
-            </ol>
-            
-        );
-        
+        return this.props.todos.map( todo => <Todo todo={todo} key={todo}/>);
     }
     
 }

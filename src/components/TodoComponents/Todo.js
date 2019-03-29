@@ -2,16 +2,9 @@ import React from 'react';
 
 class Todo extends React.Component {
     
-    
     render() {
-        const todos = this.props.todos;
-        return (
-            
-            todos.map( todo => {
-                return <li>{todo}</li>
-            })
-            
-        );
+        console.log(this.props);
+        return <li>{this.props.todo}</li>
     }
 }
 
