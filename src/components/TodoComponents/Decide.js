@@ -5,11 +5,10 @@ class Decide extends React.Component {
     
     handleClick() {
         console.log('What should I do has been clicked!');
+        alert('handleClick');
     }
     
-    render() {
-//         console.log(this.props);
-        
+    render() {        
         return (
             <div>
                 <button onClick={this.handleClick}>What should I do?</button>

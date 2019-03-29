@@ -8,10 +8,18 @@ class Todos extends React.Component {
         super();   
     }
     
+    
+    
     render() {
         console.log(this.props.todos);
         
-        return this.props.todos.map( todo => <Todo todo={todo} key={todo}/>);
+        return (
+            <div>
+                <button>Remove</button>
+                {this.props.todos.map( todo => <Todo todo={todo} key={todo}/>
+                )}
+            </div>
+        );
     }
     
 }
