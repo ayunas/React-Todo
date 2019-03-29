@@ -4,8 +4,13 @@ class Todo extends React.Component {
     
     
     render() {
+        const todos = this.props.todos;
         return (
-            <li>Todo Item</li>
+            
+            todos.map( todo => {
+                return <li>{todo}</li>
+            })
+            
         );
     }
 }

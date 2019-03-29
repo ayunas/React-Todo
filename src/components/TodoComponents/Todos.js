@@ -14,7 +14,7 @@ class Todos extends React.Component {
         
             <ol>
                 {this.props.todos.length}
-                <Todo />
+                <Todo todos={this.props.todos}/>
             </ol>
             
         );
