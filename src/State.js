@@ -24,15 +24,25 @@ class State extends React.Component {
             });
         // this.state.count = this.state.count + 1;
         console.log(this.state);
-        this.render();
     }
     
     handleMinusOne() {
         console.log("handleMinusOne");
+        this.setState( prevState => {
+            return {
+                count : prevState.count - 1
+            }
+        } );
     }
     
     handleReset() {
         console.log("handleReset");
+        this.setState( () => {
+            return {
+               count: 0
+            }
+        });
+
     }
     
     
