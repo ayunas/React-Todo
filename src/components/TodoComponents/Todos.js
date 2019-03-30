@@ -10,7 +10,6 @@ class Todos extends React.Component {
     
     removeAll() {
         console.log('remove button has been clicked');
-        alert('removeAll has been clicked');
     }
     
     render() {

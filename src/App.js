@@ -12,7 +12,7 @@ class App extends React.Component {
         const title = 'Indecision To-Do';
         const subtitle = 'Put your life in the hands of a computer'
         const todos = ['item1','item2','item4','item-5','item-6'];
-//         console.log(this.props);
+
         return (
         <div>
             <Header title={title} subtitle={subtitle} />

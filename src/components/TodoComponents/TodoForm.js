@@ -4,20 +4,23 @@ import './Todos.css';
 class TodoForm extends React.Component {
     
     
-    addTodo() {
-        alert('addTodo has been clicked');
+    addTodo(e) {
+        e.preventDefault();
+        console.log('addTodo has been clicked');
+        const todo = e.target.elements.addtodo.value.trim();
+        if (todo) {
+            alert(todo);
+        }
     }
     
     render() {
         
-        return (<form>
-                    <input></input>
-                    <button onClick={this.addTodo}>Add Todo</button>        
+        return (<form onSubmit={this.addTodo}>
+                    <input type='text' name='addtodo' />
+                    <button>Add Todo</button>        
                 </form>
                );
-        
     }
-    
 }
 
 export default TodoForm; 

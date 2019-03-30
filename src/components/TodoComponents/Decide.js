@@ -3,15 +3,14 @@ import React from 'react';
 
 class Decide extends React.Component {
     
-    handleClick() {
+    handleDecide() {
         console.log('What should I do has been clicked!');
-        alert('handleClick');
     }
     
     render() {        
         return (
             <div>
-                <button onClick={this.handleClick}>What should I do?</button>
+                <button onClick={this.handleDecide}>What should I do?</button>
             </div>
         );
     }
