@@ -17,9 +17,9 @@ class State extends React.Component {
     handleAddOne() {
         console.log("handleAddOne");
         
-        this.setState( () => {
+        this.setState( (prevState) => {
             return {
-                count: 1
+                count: prevState.count + 1
             }
             });
         // this.state.count = this.state.count + 1;
