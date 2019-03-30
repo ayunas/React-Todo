@@ -7,7 +7,7 @@ class Decide extends React.Component {
         console.log('What should I do has been clicked!');
     }
     
-    render() {        
+    render() {
         return (
             <div>
                 <button onClick={this.handleDecide}>What should I do?</button>
