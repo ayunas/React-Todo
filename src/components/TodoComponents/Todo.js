@@ -1,7 +1,13 @@
 import React from 'react';
 
 const Todo = (props) => {
-    return <li>{props.todo}</li>;
+    return (
+        <div>
+            <li>{props.todo}</li>
+            <button onClick={props.delete}>Remove</button>
+        </div>
+    )
+    
 }
 
 // class Todo extends React.Component {

@@ -12,16 +12,22 @@ class App extends React.Component {
         this.deleteTodos = this.deleteTodos.bind(this);
         this.decideTodo = this.decideTodo.bind(this);
         this.handleAddTodo = this.handleAddTodo.bind(this);
+        this.deleteTodo = this.deleteTodo.bind(this);
         this.state = {
             todos: []
         }
     }
 
     deleteTodos() {
-        this.setState( () => {
+        this.setState( () => ( { todos: [] } ) )
+    }
+
+    deleteTodo(todoToRemove) {
+        // console.log(todoToRemove);
+        this.setState( prevState => {
             return {
-                todos : []
-             }
+                todos : prevState.todos.filter( todo => todoToRemove !== todo )
+            }
         }
         )
     }
@@ -55,6 +61,7 @@ class App extends React.Component {
             />
             <Todos todos={this.state.todos}
             deleteTodos={this.deleteTodos}
+            deleteTodo={this.deleteTodo}
             />
             <AddTodo 
             handleAddTodo={this.handleAddTodo} />
