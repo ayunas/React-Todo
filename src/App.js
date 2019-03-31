@@ -10,6 +10,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.deleteTodos = this.deleteTodos.bind(this);
+        this.decideTodo = this.decideTodo.bind(this);
         this.state = {
             todos: ['item1','item2','item4','item-5']
         }
@@ -26,6 +27,9 @@ class App extends React.Component {
 
     decideTodo() {
         console.log('decide has been clicked');
+        const choice = Math.floor(Math.random()*this.state.todos.length);
+        console.log(choice);
+        alert(this.state.todos[choice]);
     }
 
     
