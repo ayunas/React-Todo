@@ -3,6 +3,7 @@ import Header from './components/TodoComponents/Header';
 import Decide from './components/TodoComponents/Decide';
 import Todos from './components/TodoComponents/Todos';
 import TodoForm from './components/TodoComponents/TodoForm';
+import VisibilityToggle from './components/TodoComponents/VisibilityToggle.js';
 
 
 class App extends React.Component {
@@ -19,6 +20,7 @@ class App extends React.Component {
             <Decide />
             <Todos todos={todos}/>
             <TodoForm />
+            <VisibilityToggle />
         </div>
         );
     }
