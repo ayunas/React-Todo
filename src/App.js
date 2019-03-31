@@ -9,9 +9,21 @@ import VisibilityToggle from './components/TodoComponents/VisibilityToggle.js';
 class App extends React.Component {
     constructor(props) {
         super(props);
+        this.deleteTodos = this.deleteTodos.bind(this);
         this.state = {
             todos: ['item1','item2','item4','item-5']
         }
+    }
+
+    deleteTodos() {
+        this.setState( () => {
+            return {
+                todos : []
+             }
+        }
+            
+        
+        )
     }
 
     
@@ -24,7 +36,9 @@ class App extends React.Component {
         <div>
             <Header title={title} subtitle={subtitle} />
             <Decide hasTodos={this.state.todos.length > 0}/>
-            <Todos todos={this.state.todos}/>
+            <Todos todos={this.state.todos}
+            deleteTodos={this.deleteTodos}
+            />
             <TodoForm />
             <VisibilityToggle />
         </div>
