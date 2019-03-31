@@ -21,9 +21,11 @@ class App extends React.Component {
                 todos : []
              }
         }
-            
-        
         )
+    }
+
+    decideTodo() {
+        console.log('decide has been clicked');
     }
 
     
@@ -35,7 +37,9 @@ class App extends React.Component {
         return (
         <div>
             <Header title={title} subtitle={subtitle} />
-            <Decide hasTodos={this.state.todos.length > 0}/>
+            <Decide hasTodos={this.state.todos.length > 0}
+            decideTodo={this.decideTodo}
+            />
             <Todos todos={this.state.todos}
             deleteTodos={this.deleteTodos}
             />
