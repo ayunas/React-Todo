@@ -35,7 +35,11 @@ class App extends React.Component {
     }
 
     handleAddTodo(todo) {
-        alert(todo);
+        this.setState( (prevState) => {
+            return {
+               todos: prevState.todos.concat(todo)
+            }
+        })
     }
     
     render() {
