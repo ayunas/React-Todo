@@ -11,6 +11,7 @@ class App extends React.Component {
         super(props);
         this.deleteTodos = this.deleteTodos.bind(this);
         this.decideTodo = this.decideTodo.bind(this);
+        this.handleAddTodo = this.handleAddTodo.bind(this);
         this.state = {
             todos: ['item1','item2','item4','item-5']
         }
@@ -25,6 +26,7 @@ class App extends React.Component {
         )
     }
 
+
     decideTodo() {
         console.log('decide has been clicked');
         const choice = Math.floor(Math.random()*this.state.todos.length);
@@ -32,6 +34,9 @@ class App extends React.Component {
         alert(this.state.todos[choice]);
     }
 
+    handleAddTodo(todo) {
+        alert(todo);
+    }
     
     render() {
         
@@ -47,7 +52,8 @@ class App extends React.Component {
             <Todos todos={this.state.todos}
             deleteTodos={this.deleteTodos}
             />
-            <AddTodo />
+            <AddTodo 
+            handleAddTodo={this.handleAddTodo} />
             <VisibilityToggle />
         </div>
         );
