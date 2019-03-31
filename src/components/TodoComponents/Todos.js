@@ -1,20 +1,6 @@
 import React from 'react';
 import Todo from './Todo';
 
-const obj = {
-
-    name: 'amir',
-    getName() {
-        return this.name;
-    }
-}
-
-const getName = obj.getName.bind(obj);
-console.log(getName());
-
-
-
-
 class Todos extends React.Component {
     
     constructor() {

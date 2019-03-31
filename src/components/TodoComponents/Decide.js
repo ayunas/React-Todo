@@ -8,9 +8,12 @@ class Decide extends React.Component {
     }
     
     render() {
+        console.log(this.props);
         return (
             <div>
-                <button onClick={this.handleDecide}>What should I do?</button>
+                <button onClick={this.handleDecide} disabled={!this.props.hasTodos}>
+                What should I do?
+                </button>
             </div>
         );
     }

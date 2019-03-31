@@ -11,7 +11,6 @@ class VisibilityToggle extends React.Component {
     }
     
     handleToggleVisibility() {
-        // this.visibility = !this.visibility;
         this.setState( (prevState) => {
             return {visibility: !prevState.visibility}
         })
