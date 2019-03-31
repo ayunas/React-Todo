@@ -13,7 +13,7 @@ class App extends React.Component {
         this.decideTodo = this.decideTodo.bind(this);
         this.handleAddTodo = this.handleAddTodo.bind(this);
         this.state = {
-            todos: ['item1','item2','item4','item-5']
+            todos: []
         }
     }
 
