@@ -2,7 +2,7 @@ import React from 'react';
 import Header from './components/TodoComponents/Header';
 import Decide from './components/TodoComponents/Decide';
 import Todos from './components/TodoComponents/Todos';
-import TodoForm from './components/TodoComponents/TodoForm';
+import AddTodo from './components/TodoComponents/AddTodo';
 import VisibilityToggle from './components/TodoComponents/VisibilityToggle.js';
 
 
@@ -47,7 +47,7 @@ class App extends React.Component {
             <Todos todos={this.state.todos}
             deleteTodos={this.deleteTodos}
             />
-            <TodoForm />
+            <AddTodo />
             <VisibilityToggle />
         </div>
         );

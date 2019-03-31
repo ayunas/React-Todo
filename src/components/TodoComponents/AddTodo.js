@@ -1,7 +1,7 @@
 import React from 'react';
 import './Todos.css';
 
-class TodoForm extends React.Component {
+class AddTodo extends React.Component {
     
     
     addTodo(e) {
@@ -23,4 +23,4 @@ class TodoForm extends React.Component {
     }
 }
 
-export default TodoForm; 
+export default AddTodo; 
