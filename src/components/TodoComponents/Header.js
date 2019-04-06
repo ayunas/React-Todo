@@ -1,27 +1,14 @@
 import React from 'react';
+import '../../styles/styles.css';
 
 
 const Header = (props) => {
     return (
-        <div>
+        <header>
             <h1>{props.title}</h1>
             <h2>{props.subtitle}</h2>
-        </div>
+        </header>
         );
 }
-
-
-// class Header extends React.Component {
-    
-//     render() {
-// //        console.log(this.props);
-//         return (
-//             <div>
-//                 <h1>{this.props.title}</h1>
-//                 <h2>{this.props.subtitle}</h2>
-//             </div>
-//             );
-//     }
-// }
 
 export default Header;

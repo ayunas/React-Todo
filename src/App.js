@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles/app.scss';
 import Header from './components/TodoComponents/Header';
 import Decide from './components/TodoComponents/Decide';
 import Todos from './components/TodoComponents/Todos';
@@ -50,11 +51,11 @@ class App extends React.Component {
     
     render() {
         
-        const title = 'Indecision To-Do';
-        const subtitle = 'Put your life in the hands of a computer'
+        const title = 'What To Do?';
+        const subtitle = 'Organize Your Life, One Todo at a Time'
        
         return (
-        <div>
+        <div id='app'>
             <Header title={title} subtitle={subtitle} />
             <Decide hasTodos={this.state.todos.length > 0}
             decideTodo={this.decideTodo}
@@ -65,7 +66,7 @@ class App extends React.Component {
             />
             <AddTodo 
             handleAddTodo={this.handleAddTodo} />
-            <VisibilityToggle />
+            {/* <VisibilityToggle /> */}
         </div>
         );
     }

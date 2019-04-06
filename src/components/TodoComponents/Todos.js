@@ -5,7 +5,6 @@ const Todos = (props) => {
     console.log(props.deleteTodo);
     return (
         <div>
-            <button onClick={props.deleteTodos}>Remove All</button>
             {
                 props.todos.map ( todo => <Todo 
                     todo={todo} 
@@ -13,6 +12,7 @@ const Todos = (props) => {
                     delete={props.deleteTodo}
                     />)
             }
+            <button onClick={props.deleteTodos}>Remove All</button>
         </div>
     );
 }
