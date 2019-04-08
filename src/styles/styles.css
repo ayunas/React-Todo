@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6 rem;
+}
+
+.list {
+    
+}
+
+li {
+    font-size: 3rem;
+    color: #1F212B;
+    border: 5px solid #1F212B;
+    border-radius: 1rem;
+    background: #A5AFD6;
+    width: 30rem;
+    height: 5rem;
+    display: inline-block;
+}
+
+header {
+    background-color: #1F212B;
+    color: white;
+    padding: 1rem;
+}
+
+header h1 {
+    font-size: 5rem;
+}
+
+header h2 {
+    font-size: 2.2rem;
+    color: #A5AFD6;
+}
+
+#app {
+    text-align: center;    
+}
+
+button {
+    height: 4rem;
+    background: #A5AFD6;
+    border: 5px solid #1F212B;
+    margin: 1rem 2rem;
+}
+
+input {
+    height: 3rem;
+    width: 40rem;
+}
