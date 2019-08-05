@@ -20,55 +20,55 @@ class App extends React.Component {
     }
 
     deleteTodos() {
-        this.setState( () => ( { todos: [] } ) )
+        this.setState(() => ({ todos: [] }))
     }
 
     deleteTodo(todoToRemove) {
-        // console.log(todoToRemove);
-        this.setState( prevState => {
-            return {
-                todos : prevState.todos.filter( todo => todoToRemove !== todo )
-            }
-        }
-        )
+
+        this.setState({
+            todos: this.state.todos.filter((todo, index, todos) => {
+                console.log(todos)
+                return todoToRemove.index !== index;
+            })
+        })
     }
 
 
     decideTodo() {
         console.log('decide has been clicked');
-        const choice = Math.floor(Math.random()*this.state.todos.length);
+        const choice = Math.floor(Math.random() * this.state.todos.length);
         console.log(choice);
         alert(this.state.todos[choice]);
     }
 
     handleAddTodo(todo) {
-        this.setState( (prevState) => {
+        this.setState((prevState) => {
             return {
-               todos: prevState.todos.concat(todo)
+                todos: prevState.todos.concat(todo)
             }
         })
-        
+
     }
-    
+
     render() {
-        
+
         const title = 'What To Do?';
         const subtitle = 'Organize Your Life, One Todo at a Time'
-       
+
         return (
-        <div id='app'>
-            <Header title={title} subtitle={subtitle} />
-            <Decide hasTodos={this.state.todos.length > 0}
-            decideTodo={this.decideTodo}
-            />
-            <Todos todos={this.state.todos}
-            deleteTodos={this.deleteTodos}
-            deleteTodo={this.deleteTodo}
-            />
-            <AddTodo 
-            handleAddTodo={this.handleAddTodo} />
-            {/* <VisibilityToggle /> */}
-        </div>
+            <div id='app'>
+                <Header title={title} subtitle={subtitle} />
+                <Decide hasTodos={this.state.todos.length > 0}
+                    decideTodo={this.decideTodo}
+                />
+                <Todos todos={this.state.todos}
+                    deleteTodos={this.deleteTodos}
+                    deleteTodo={this.deleteTodo}
+                />
+                <AddTodo
+                    handleAddTodo={this.handleAddTodo} />
+                {/* <VisibilityToggle /> */}
+            </div>
         );
     }
 }
